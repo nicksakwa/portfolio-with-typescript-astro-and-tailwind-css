@@ -77,11 +77,11 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
+      name: "Medical Information system",
+      summary: "A medical referral application for AHA action for refugess",
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/spotifu.png",
+      linkSource: "https://www.hackster.io/nsakwa/medical-referral-system-for-contact-tracing-a9926e",
+      image: "/mis-blood-test.avif",
     },
     {
       name: "Shopp App",
