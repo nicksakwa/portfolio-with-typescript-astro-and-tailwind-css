@@ -84,11 +84,11 @@ export const SITE_CONTENT: SiteContent = {
       image: "/mis-blood-test.avif",
     },
     {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
+      name: "2025 unemployment prediction model",
+      summary: "A Data Science and Machine learning model",
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/shopify-clon.png",
+      linkSource: "https://github.com/nicksakwa/data-Science-and-machine-learning-model-unemployement",
+      image: "/2025-unemployement-predictions-ug.png",
     },
     {
       name: "ClonTagram",
