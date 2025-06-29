@@ -85,14 +85,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "A Data Science and Machine learning model",
       linkPreview: "/",
       linkSource: "https://github.com/nicksakwa/data-Science-and-machine-learning-model-unemployement",
-      image: "/unemployment-predictions.jpg",
-    },
-    {
-      name: "health recomendations smart watch data",
-      summary: "a Data science and machine learning model for linear regression with calorie burnage prediction vs average pulse",
-      linkPreview: "https://medium.com/@nicksakwa/data-science-with-the-python-programming-language-39e8e4b08e5b",
-      linkSource: "https://github.com/nicksakwa/DataScience-and-Machine-learning-algorithms-linear-regression",
-      image: "/linearregressioncalorieburnagevsaveragepulse.webp",
+      image: "/unemployment-predictions-2025.jpg",
     },
   ],
   about: {
