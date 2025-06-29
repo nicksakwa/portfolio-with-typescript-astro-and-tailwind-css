@@ -1,31 +1,41 @@
-# AstroZen - Personal Portfolio Website
+# Hi there! 👋
 
-AstroZen is a minimalist, accessible and responsive portfolio template for your personal portfolio website. It is built with Astro and TailwindCSS.
+This GitHub repository provides astro web framework with Typescript
 
-![zen-og](https://github.com/user-attachments/assets/7a72aaae-6652-4cd0-becc-8e6a3c224993)
+# Corporate portfolio with Astro web framework and Typescript
 
-> [!NOTE]
-> The information contained in this template, including names, images, and content, is entirely fictitious and is intended solely to give the design a realistic appearance. Any coincidence with real-life people, events, or situations is purely coincidental. It is recommended that you replace this information with your own information.
+This project was bootstrapped with Astro template
 
-## 🔥 Features
+In the project directory, you can run:
+1.  **Node:** Which you can download from the [official Nodejs website](https://nodejs.org/en/download).
+2.  **Astro** framework and  library used in this project:
 
-- [x] Minimalist design. clean and simple
-- [x] Mobile-first responsive layout
-- [x] SEO-friendly and accessible
-- [x] Easy to customize with a single configuration file
 
-## ✅ Lighthouse Score
+    ```bash
+    git clone https://github.com/nicksakwa/portfolio-with-typescript-astro-and-tailwind-css
+    ```
+    ```bash
+    pnpm install
+    ```
+## How to run this example
 
-![performance](https://github.com/user-attachments/assets/4f95e2ca-03f9-4996-9e34-dcd179194c58)
+To execute the React JS app in this repository
 
-## 🚀 Getting Started
+1.  Navigate to the directory containing the files in your terminal.
+2.  Run the desired script using the Python interpreter:
+    ```bash
+    pnpm run dev
+    ```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Clone this repository to your local machine using Git.
+## Project Structure
 
-```scheme
-git clone https://github.com/immois/astro-zen.git
-cd astro-zen
-```
+Astro looks for `.astro`, `.md`, or `.js` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+
+Any static assets, like images, can be placed in the `public/` directory.
 
 | Command        | Action                                       |
 | :------------- | :------------------------------------------- |
