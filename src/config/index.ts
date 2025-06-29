@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Nick Sakwa ",
     specialty: "Software Developer",
     summary:
-      "Software Engineer from Kampala, Uganda. I specialize in developing Data Science and machine learning model, web and mobile application development and maintenance.",
+      "Software Engineer from Kampala, Uganda. Develop Data Science and machine learning model, web and mobile apps with cloud maintenance & cyber security experience.",
     email: "nsakwa@gmail.com",
   },
   experience: [
@@ -38,9 +38,9 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Feb 2024",
       endDate: "Present",
       summary: [
-        "• Web and software application development: Python, JavaScript & React Native",
-        "• Cloud deployment and cyber security",
-        "• Machine learning with TensorFlow JS, Data Science & Analytics with Pandas & Matplotlib",
+        "• Web & app development: Python, PHP, Dart, JavaScript",
+        "• Cloud, kubernetes & cyber security",
+        "• Machine learning, Data Science & Analytics",
       ],
     },
     {
@@ -49,8 +49,8 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "June 2020",
       endDate: "Feb 2024",
       summary: [
-        "•	Systems administration, SEO, Digital Strategy & Data Analysis",
-        "•	Software testing for web application, mobile website, Android app and iOS application",
+        "•	Systems admin, SEO & Data Analysis",
+        "•	Software unit testing",
         "•	Graphics design with Adobe Photoshop, Illustrator & Premiere Pro",
       ],
     },
@@ -60,22 +60,19 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Jan 2020",
       endDate: "June 2020",
       summary:[
-        "•	Developed Medical Referral application-PHP Codeigniter for web application",
+        "•	Developed Medical Referral system-PHP for web app",
         "•	Native Android app version- Java",
-      ],
-    },
-    {
-      company: "Techworth Group",
-      position: "Software Developer",
-      startDate: "Jan 2017",
-      endDate: "Jan 2020",
-      summary: [
-        "• Web app development- PHP Laravel, Vue & React JS, Python Flask & Django",
-        "• Mobile app development- React Native JavaScript, Flutter framework with Dart.",
       ],
     },
   ],
   projects: [
+    {
+      name: "BlogWind",
+      summary: "Tailwind Typescript Blog with NextJS",
+      linkPreview: "https://blogwind.vercel.app/",
+      linkSource: "https://github.com/nicksakwa/nextjs-tailwind-css-blog",
+      image: "/blogwind.jpg",
+    },
     {
       name: "Medical Information system",
       summary: "A medical referral application for AHA action for refugess",
@@ -100,12 +97,11 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      Hi, I’m Nick Sakwa, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in backend and frontend development, as well as mobile android and iOS technologies, I thrive in the intersection where creativity meets technology.
-
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+       I’m a Mobile and Web Developer with a strong background in backend and frontend development, as well as data science and machine learning technologies.
+       I focus on performance, security, and scalability.
     `,
     image: "/profilepic.jpg",
   },
 };
 
-// #5755ff
+

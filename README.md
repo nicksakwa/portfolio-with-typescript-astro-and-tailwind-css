@@ -9,7 +9,7 @@ This project was bootstrapped with Astro template
 In the project directory, you can run:
 1.  **Node:** Which you can download from the [official Nodejs website](https://nodejs.org/en/download).
 2.  **Astro** framework and  library used in this project:
-3.  **Tailwind** shortend CSS code withing your project:
+3.  **Tailwind** shortend CSS code within your project:
 
 
     ```bash
