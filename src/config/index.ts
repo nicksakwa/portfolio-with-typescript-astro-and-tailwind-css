@@ -38,9 +38,9 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Feb 2024",
       endDate: "Present",
       summary: [
-        "• Web & app development: Python, PHP, Dart, JavaScript",
-        "• Cloud, kubernetes & cyber security",
-        "• Machine learning, Data Science & Analytics",
+        "Web & app development: Python, PHP, Dart, JavaScript",
+        "Cloud, kubernetes & cyber security",
+        "Machine learning, Data Science & Analytics",
       ],
     },
     {
@@ -49,9 +49,9 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "June 2020",
       endDate: "Feb 2024",
       summary: [
-        "•	Systems admin, SEO & Data Analysis",
-        "•	Software unit testing",
-        "•	Graphics design with Adobe Photoshop, Illustrator & Premiere Pro",
+        "Systems admin, SEO & Data Analysis",
+        "Software unit testing",
+        "Graphics design with Adobe Photoshop, Illustrator & Premiere Pro",
       ],
     },
     {
@@ -60,8 +60,8 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Jan 2020",
       endDate: "June 2020",
       summary:[
-        "•	Developed Medical Referral system-PHP for web app",
-        "•	Native Android app version- Java",
+        "Developed Medical Referral system-PHP for web app",
+        "Native Android app version- Java",
       ],
     },
   ],
