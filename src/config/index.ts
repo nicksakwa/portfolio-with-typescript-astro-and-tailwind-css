@@ -81,6 +81,13 @@ export const SITE_CONTENT: SiteContent = {
       image: "/mis-blood-test.avif",
     },
     {
+      name: "RemWaste Skip design UK",
+      summary: "A ReactJS web design post card for UK based waste collection company",
+      linkPreview: "https://wewantwaste.co.uk/",
+      linkSource: "https://reactwaste.vercel.app/",
+      image: "/REM-waste-design.jpg",
+    },
+    {
       name: "2025 unemployment prediction model",
       summary: "A Data Science and Machine learning model",
       linkPreview: "/",
