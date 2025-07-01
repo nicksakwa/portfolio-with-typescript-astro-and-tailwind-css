@@ -71,7 +71,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "Dashboard design with Visactor library typescript with NextJS framework",
       linkPreview: "https://nickdash.vercel.app/",
       linkSource: "https://nickdash.vercel.app/",
-      image: "/customer-agent-dashboard.jpg",
+      image: "/customerdash.jpg",
     },
     {
       name: "BlogWind",
