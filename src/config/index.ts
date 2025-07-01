@@ -67,6 +67,13 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
+      name: "Customer Agent Dashboard",
+      summary: "Dashboard design with Visactor library typescript with NextJS framework",
+      linkPreview: "https://nickdash.vercel.app/",
+      linkSource: "https://nickdash.vercel.app/",
+      image: "/customer-agent-dashboard.jpg",
+    },
+    {
       name: "BlogWind",
       summary: "Tailwind Typescript Blog with NextJS",
       linkPreview: "https://blogwind.vercel.app/",
