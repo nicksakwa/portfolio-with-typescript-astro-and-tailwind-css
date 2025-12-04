@@ -43,7 +43,6 @@ export const SITE_CONTENT: SiteContent = {
         "Fintech solutions integration with Mobile Money and Visa/Mastercard APIs",
       ],
     },
-
     {
       company: "Techworth Group",
       position: "IT & Digital Developer",
@@ -78,6 +77,13 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   projects: [
+    {
+      name: "Yassako electricity credit application",
+      summary: "API development, web and mobile app for electricity credit purchase available on Android and iOS platforms",
+      linkPreview: "https://yassako.net/",
+      linkSource: "https://yassako.net/",
+      image: "/yassako.png",
+    },
     {
       name: "Customer Agent Dashboard",
       summary: "Dashboard design with Visactor library typescript with NextJS framework",
