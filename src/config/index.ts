@@ -78,11 +78,11 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
-      name: "Lyxa events application",
-      summary: "API development, web and mobile app for ticket purchase and verification available on Android and iOS platforms",
-      linkPreview: "http://lyxaevents.com/",
-      linkSource: "http://lyxaevents.com/",
-      image: "/lyxa.png",
+      name: "Limbo pay reliable payment platform",
+      summary: "API development, web and mobile app for freelance payments available on Android and iOS platforms",
+      linkPreview: "https://limbopay.com/",
+      linkSource: "https://limbopay.com/",
+      image: "/limbopay.png",
     },
     {
       name: "Yassako electricity credit application",
@@ -90,6 +90,13 @@ export const SITE_CONTENT: SiteContent = {
       linkPreview: "https://yassako.net/",
       linkSource: "https://yassako.net/",
       image: "/yassako.png",
+    },
+    {
+      name: "Lyxa events application",
+      summary: "API development, web and mobile app for ticket purchase and verification available on Android and iOS platforms",
+      linkPreview: "http://lyxaevents.com/",
+      linkSource: "http://lyxaevents.com/",
+      image: "/lyxa.png",
     },
     {
       name: "Customer Agent Dashboard",
