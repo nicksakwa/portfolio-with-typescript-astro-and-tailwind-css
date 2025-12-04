@@ -26,17 +26,29 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Nick Sakwa ",
-    specialty: "Software Developer",
+    specialty: "Full Stack Developer",
     summary:
-      "Software Engineer from Kampala, Uganda. Develop Data Science and machine learning model, web and mobile apps with cloud maintenance & cyber security experience.",
+      "I am a full-stack developer from Kampala, Uganda with 9 years of experience delivering secure optimized solutions via web, mobile apps, cloud & data environments.",
     email: "nsakwa@gmail.com",
   },
   experience: [
     {
+      company: "Qriscorp (U) Limited",
+      position: "Full Stack Developer",
+      startDate: "July 2025",
+      endDate: "Present",
+      summary: [
+        "Web & app development: Python, Kotlin, Dart, JavaScript",
+        "DeVOps management with Docker and Linux VPS",
+        "Fintech solutions integration with Mobile Money and Visa/Mastercard APIs",
+      ],
+    },
+
+    {
       company: "Techworth Group",
       position: "IT & Digital Developer",
       startDate: "Feb 2024",
-      endDate: "Present",
+      endDate: "June 2025",
       summary: [
         "Web & app development: Python, PHP, Dart, JavaScript",
         "Cloud, kubernetes & cyber security",
