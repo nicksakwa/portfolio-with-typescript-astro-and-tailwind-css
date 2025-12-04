@@ -78,6 +78,13 @@ export const SITE_CONTENT: SiteContent = {
   ],
   projects: [
     {
+      name: "Lyxa events application",
+      summary: "API development, web and mobile app for ticket purchase and verification available on Android and iOS platforms",
+      linkPreview: "http://lyxaevents.com/",
+      linkSource: "http://lyxaevents.com/",
+      image: "/lyxa.png",
+    },
+    {
       name: "Yassako electricity credit application",
       summary: "API development, web and mobile app for electricity credit purchase available on Android and iOS platforms",
       linkPreview: "https://yassako.net/",
