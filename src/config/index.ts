@@ -33,46 +33,25 @@ export const SITE_CONTENT: SiteContent = {
   },
   experience: [
     {
+      company: "Techno Brain Group",
+      position: "Full Stack Developer",
+      startDate: "Feb 2026",
+      endDate: "Present",
+      summary: [
+        "Web & app development: Front-end & backend",
+        "DevOps management with CI & CD pipelines",
+        "ERP & CRM solutions for Bigtech clients & international organizations",
+      ],
+    },
+     {
       company: "Qriscorp (U) Limited",
       position: "Full Stack Developer",
       startDate: "July 2025",
-      endDate: "Present",
+      endDate: "Feb 2026",
       summary: [
-        "Web & app development: Python, Kotlin, Dart, JavaScript",
-        "DeVOps management with Docker and Linux VPS",
+        "Web & app development: Front-end & backend",
+        "DeVOps management with Cloud, Linux and scaling solutions",
         "Fintech solutions integration with Mobile Money and Visa/Mastercard APIs",
-      ],
-    },
-    {
-      company: "Techworth Group",
-      position: "IT & Digital Developer",
-      startDate: "Feb 2024",
-      endDate: "June 2025",
-      summary: [
-        "Web & app development: Python, PHP, Dart, JavaScript",
-        "Cloud, kubernetes & cyber security",
-        "Machine learning, Data Science & Analytics",
-      ],
-    },
-    {
-      company: "Melbet Uganda",
-      position: "IT & Digital Consultant",
-      startDate: "June 2020",
-      endDate: "Feb 2024",
-      summary: [
-        "Systems admin, SEO & Data Analysis",
-        "Software unit testing",
-        "Graphics design with Adobe Photoshop, Illustrator & Premiere Pro",
-      ],
-    },
-    {
-      company: "AHA-African Humanitarian Action",
-      position: "IT Developer",
-      startDate: "Jan 2020",
-      endDate: "June 2020",
-      summary:[
-        "Developed Medical Referral system-PHP for web app",
-        "Native Android app version- Java",
       ],
     },
   ],
