@@ -68,10 +68,18 @@ const getDesktopImage = (imgPath: string) => {
                     width="736"
                     height="483"
                   />
-                  {/* Tablet & Desktop: JPG version */}
+                  {/* Tablet: JPG version */}
                   <Image
-                    class="hidden sm:block w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    class="hidden sm:block lg:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl"
                     src={desktopImage}
+                    alt={name}
+                    width="736"
+                    height="483"
+                  />
+                  {/* Desktop: PNG version */}
+                  <Image
+                    class="hidden lg:block w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    src={image}
                     alt={name}
                     width="736"
                     height="483"

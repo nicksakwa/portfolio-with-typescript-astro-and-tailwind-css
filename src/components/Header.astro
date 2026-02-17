@@ -43,7 +43,7 @@ const { siteLogo, navLinks } = Astro.props;
       navLinks.map((link) => (
         <li>
           <a
-            class="nav-item block p-3 text-base font-medium transition-all duration-300 hover:text-primary hover:bg-primary/10 rounded-lg"
+            class="nav-item block p-3 text-base font-medium transition-all duration-300 hover:text-primary hover:bg-[#2563eb]/10 rounded-lg"
             href={link.href}
           >
             {link.text}
@@ -59,7 +59,7 @@ const { siteLogo, navLinks } = Astro.props;
   <div class="flex flex-col items-center gap-8">
     <a href="/" aria-label="Home link" class="mb-4">
       <Image
-        class="rounded-full ring-2 ring-primary/30 hover:ring-primary transition-all"
+        class="rounded-full ring-2 ring-[#2563eb]/30 hover:ring-[#2563eb] transition-all"
         src={siteLogo}
         width="60"
         height="60"
@@ -74,7 +74,7 @@ const { siteLogo, navLinks } = Astro.props;
             class="nav-item group flex flex-col items-center gap-2 transition-all duration-300"
             href={link.href}
           >
-            <span class="w-1 h-12 bg-neutral/40 rounded-full group-hover:bg-primary group-hover:h-16 transition-all duration-300"></span>
+            <span class="w-1 h-12 bg-neutral/40 rounded-full group-hover:bg-[#2563eb] group-hover:h-16 transition-all duration-300"></span>
             <span class="text-sm font-medium text-neutral group-hover:text-primary transition-colors">
               {link.text}
             </span>
@@ -132,7 +132,7 @@ const { siteLogo, navLinks } = Astro.props;
 
 <style>
   .nav-item.active span:first-of-type {
-    @apply bg-primary h-16;
+    @apply bg-[#2563eb] h-16;
   }
   .nav-item.active span:last-of-type {
     @apply text-primary;
