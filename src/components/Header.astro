@@ -8,8 +8,9 @@ type Props = HeaderProps;
 const { siteLogo, navLinks } = Astro.props;
 ---
 
+<!-- Mobile Header -->
 <header
-  class="sticky top-0 z-50 mx-auto flex max-w-7xl animate-slide-in justify-between bg-black px-5 lg:px-8 py-6"
+  class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-black/95 backdrop-blur-sm px-5 py-4 lg:hidden border-b border-neutral/20"
 >
   <a href="/" aria-label="Home link">
     <Image
@@ -24,39 +25,71 @@ const { siteLogo, navLinks } = Astro.props;
   <button
     type="button"
     id="menu-button"
-    class="px-1.5 text-neutral sm:hidden"
+    class="px-1.5 text-neutral"
     aria-expanded="false"
     aria-controls="main-menu"
   >
     <Menu />
   </button>
+</header>
 
-  <nav
-    class="absolute top-20 right-5 hidden rounded-xl border border-neutral/40 bg-black px-4 py-5 text-neutral sm:static sm:block sm:border-0 sm:bg-transparent sm:p-0"
-    id="main-menu"
-  >
-    <ul class="gap-2 sm:flex">
+<!-- Mobile Menu -->
+<nav
+  class="fixed top-20 right-5 z-40 hidden rounded-xl border border-neutral/40 bg-black px-4 py-5 text-neutral lg:hidden"
+  id="main-menu"
+>
+  <ul class="space-y-2">
+    {
+      navLinks.map((link) => (
+        <li>
+          <a
+            class="nav-item block p-3 text-base font-medium transition-all duration-300 hover:text-primary hover:bg-primary/10 rounded-lg"
+            href={link.href}
+          >
+            {link.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<!-- Desktop Sidebar -->
+<aside class="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 z-50">
+  <div class="flex flex-col items-center gap-8">
+    <a href="/" aria-label="Home link" class="mb-4">
+      <Image
+        class="rounded-full ring-2 ring-primary/30 hover:ring-primary transition-all"
+        src={siteLogo}
+        width="60"
+        height="60"
+        alt="website logo"
+      />
+    </a>
+
+    <nav class="flex flex-col gap-6">
       {
         navLinks.map((link) => (
-          <li class="relative">
-            <a
-              class={`nav-item relative block p-2 text-sm font-medium transition-all duration-500 after:absolute after:bottom-0 after:left-2/4 after:h-2 after:w-1 after:-translate-x-2/4 after:text-primary after:opacity-0 after:content-['•'] hover:text-white`}
-              href={link.href}
-            >
+          <a
+            class="nav-item group flex flex-col items-center gap-2 transition-all duration-300"
+            href={link.href}
+          >
+            <span class="w-1 h-12 bg-neutral/40 rounded-full group-hover:bg-primary group-hover:h-16 transition-all duration-300"></span>
+            <span class="text-sm font-medium text-neutral group-hover:text-primary transition-colors">
               {link.text}
-            </a>
-          </li>
+            </span>
+          </a>
         ))
       }
-    </ul>
-  </nav>
-</header>
+    </nav>
+  </div>
+</aside>
 
 <script>
   // Toggle mobile menu
   const button = document.querySelector("#menu-button");
   const menu = document.querySelector("#main-menu");
-  const navItems = document.querySelectorAll("#main-menu > ul > li > a");
+  const navItems = document.querySelectorAll(".nav-item");
 
   const toggleMenu = () => {
     menu?.classList.toggle("hidden");
@@ -66,19 +99,24 @@ const { siteLogo, navLinks } = Astro.props;
 
   button?.addEventListener("click", toggleMenu);
   navItems.forEach((item) => {
-    item?.addEventListener("click", toggleMenu);
+    item?.addEventListener("click", () => {
+      if (window.innerWidth < 1024) {
+        toggleMenu();
+      }
+    });
   });
 
-  // Update navigation based on scroll position with Intersection Observer
+  // Update navigation based on scroll position
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
-            if (item.getAttribute("href") === `#${entry.target.id}`) {
-              item.classList.add("text-white", "md:after:opacity-100");
+            const href = item.getAttribute("href");
+            if (href === `#${entry.target.id}`) {
+              item.classList.add("active");
             } else {
-              item.classList.remove("text-white", "md:after:opacity-100");
+              item.classList.remove("active");
             }
           });
         }
@@ -90,22 +128,13 @@ const { siteLogo, navLinks } = Astro.props;
   document.querySelectorAll("section").forEach((section) => {
     observer.observe(section);
   });
-
-  // Cleanup observer
-  document.onvisibilitychange = () => {
-    if (document.visibilityState === "hidden") {
-      observer.disconnect();
-    } else {
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
-      });
-    }
-  };
 </script>
 
 <style>
-  header {
-    animation-timeline: scroll();
-    animation-range: 0 650px;
+  .nav-item.active span:first-of-type {
+    @apply bg-primary h-16;
+  }
+  .nav-item.active span:last-of-type {
+    @apply text-primary;
   }
 </style>

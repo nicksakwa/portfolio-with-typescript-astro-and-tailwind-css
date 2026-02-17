@@ -35,12 +35,12 @@ const getDesktopImage = (imgPath: string) => {
           <div class="bg-difu relative z-[1] grid w-full grid-rows-[auto_300px] rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-[40%_60%] sm:grid-rows-1 sm:h-[500px] md:h-[550px] lg:h-[580px]">
             <div class="px-6 pt-8 pb-6 sm:px-7 sm:pt-10 sm:pb-10 md:px-9 md:pt-12 md:pb-12 flex flex-col justify-between order-2 sm:order-1">
               <div>
-                <h3 class="mb-3 sm:mb-4 md:mb-5 font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-primary leading-tight">
+                <h3 class="mb-3 sm:mb-4 md:mb-5 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-primary leading-tight">
                   {name}
                 </h3>
-                <p class="text-sm sm:text-base md:text-lg text-neutral leading-relaxed">{summary}</p>
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral leading-relaxed">{summary}</p>
               </div>
-              <div class="flex gap-5 pt-6 sm:pt-8 text-white text-sm sm:text-base">
+              <div class="flex gap-5 pt-6 sm:pt-8 text-white text-base sm:text-lg md:text-xl">
                 <a
                   href={linkSource}
                   target="_blank"
