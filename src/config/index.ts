@@ -94,7 +94,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-       I’m a Full stack developer with a strong fundamentals in backend and frontend development, as well as experience in AI engineering.
+       I’m a Full stack developer with strong fundamentals in backend and frontend development, as well as experience in AI engineering.
        I focus on performance, security, and scalability.
     `,
     image: "/profilepic.jpg",
