@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Nick Sakwa ",
     specialty: "Full Stack Developer",
     summary:
-      "I am a full-stack developer from Kampala, Uganda with 9 years of experience delivering secure optimized solutions via web, mobile apps, cloud & data environments.",
+      "I am a full-stack developer from Kampala, Uganda with 9 years of experience delivering secure optimized solutions via AI, web, mobile apps, cloud & data environments.",
     email: "nsakwa@gmail.com",
   },
   experience: [
