@@ -28,7 +28,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Nick Sakwa ",
     specialty: "Full Stack Developer",
     summary:
-      "I am a full-stack developer from Kampala, Uganda with 9 years of experience delivering secure optimized solutions via AI, web, mobile apps, cloud & data environments.",
+      "I am a full-stack developer from Kampala, Uganda with 9 years of experience delivering secure optimized solutions via Artificial Intelligence, web, mobile apps, cloud & data environments.",
     email: "nsakwa@gmail.com",
   },
   experience: [
@@ -38,9 +38,9 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Feb 2026",
       endDate: "Present",
       summary: [
-        "Web & app development: Front-end & backend",
+        "Web & app development: Frontend & backend",
         "DevOps management with CI & CD pipelines",
-        "ERP & CRM solutions for Bigtech clients & international organizations",
+        "ERP & CRM solutions for Governments & international organizations",
       ],
     },
      {
@@ -49,8 +49,8 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "July 2025",
       endDate: "Feb 2026",
       summary: [
-        "Web & app development: Front-end & backend",
-        "DeVOps management with Cloud, Linux and scaling solutions",
+        "Web & app development: Frontend & backend",
+        "DevOps management with Cloud, Linux and scaling solutions",
         "Fintech solutions integration with Mobile Money and Visa/Mastercard APIs",
       ],
     },
@@ -94,7 +94,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-       I’m a Mobile and Web Developer with a strong background in backend and frontend development, as well as data science and machine learning technologies.
+       I’m a Full stack developer with a strong fundamentals in backend and frontend development, as well as experience in AI engineering.
        I focus on performance, security, and scalability.
     `,
     image: "/profilepic.jpg",
