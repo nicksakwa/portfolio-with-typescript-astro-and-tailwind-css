@@ -8,12 +8,25 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+
+// Images with mobile (.png) and desktop (.jpg) alternatives
+const hasResponsiveImage = (imgPath: string) => {
+  const responsiveImages = ['limbopay.png', 'yassako.png', 'lyxa.png'];
+  return responsiveImages.some(img => imgPath.includes(img));
+};
+
+const getDesktopImage = (imgPath: string) => {
+  return imgPath.replace('.png', '.jpg');
+};
 ---
 
 <Section text="Featured Projects" href="projects">
   {
     projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
       const top = 98 + index * 40;
+      const useResponsive = hasResponsiveImage(image);
+      const desktopImage = useResponsive ? getDesktopImage(image) : image;
+      
       return (
         <div
           style={`top: ${top}px;`}
@@ -45,13 +58,34 @@ const { projects } = Astro.props;
               </div>
             </div>
             <div class="flex items-center justify-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-t-2xl sm:rounded-l-none sm:rounded-r-2xl p-6 sm:p-8 md:p-10 order-1 sm:order-2">
-              <Image
-                class="w-full h-full rounded-lg object-contain drop-shadow-2xl"
-                src={image}
-                alt={name}
-                width="736"
-                height="483"
-              />
+              {useResponsive ? (
+                <>
+                  {/* Mobile: PNG version */}
+                  <Image
+                    class="block sm:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    src={image}
+                    alt={name}
+                    width="736"
+                    height="483"
+                  />
+                  {/* Tablet & Desktop: JPG version */}
+                  <Image
+                    class="hidden sm:block w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    src={desktopImage}
+                    alt={name}
+                    width="736"
+                    height="483"
+                  />
+                </>
+              ) : (
+                <Image
+                  class="w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                  src={image}
+                  alt={name}
+                  width="736"
+                  height="483"
+                />
+              )}
             </div>
           </div>
         </div>
