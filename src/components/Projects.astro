@@ -32,37 +32,44 @@ const getDesktopImage = (imgPath: string) => {
           style={`top: ${top}px;`}
           class="sticky mb-16 sm:mb-20 rounded-2xl border border-neutral/20 bg-black"
         >
-          <div class="bg-difu relative z-[1] grid w-full grid-rows-[auto_300px] rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-[40%_60%] sm:grid-rows-1 sm:min-h-[500px] md:min-h-[550px] lg:min-h-[580px]">
-            <div class="px-6 pt-8 pb-8 sm:px-7 sm:pt-10 sm:pb-12 md:px-9 md:pt-12 md:pb-14 flex flex-col order-2 sm:order-1">
-              <div class="flex-1 min-h-0">
-                <h3 class="mb-3 sm:mb-4 md:mb-5 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-primary leading-tight">
+          <div class="bg-difu relative z-[1] grid w-full grid-rows-[auto_auto] rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-[45%_55%] sm:grid-rows-1 sm:min-h-[520px] md:min-h-[580px] lg:min-h-[620px]">
+            <div class="px-6 pt-6 pb-6 sm:px-8 sm:pt-10 sm:pb-10 md:px-10 md:pt-12 md:pb-12 lg:px-12 lg:pt-14 lg:pb-14 flex flex-col justify-between order-2 sm:order-1 min-h-[400px] sm:min-h-0">
+              <div class="mb-6 sm:mb-8">
+                <h3 class="mb-4 sm:mb-5 md:mb-6 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-primary leading-tight">
                   {name}
                 </h3>
-                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral leading-relaxed">{summary}</p>
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-neutral leading-relaxed mb-6 sm:mb-0">{summary}</p>
               </div>
-              <div class="flex flex-wrap gap-5 sm:gap-6 pt-8 sm:pt-10 mt-auto text-white text-base sm:text-lg md:text-xl flex-shrink-0">
+              <div class="flex flex-wrap gap-6 sm:gap-7 md:gap-8 text-white text-lg sm:text-xl md:text-2xl flex-shrink-0">
                 <a
                   href={linkSource}
                   target="_blank"
-                  class="inline-flex items-center gap-2 after:content-[url(/external.svg)] hover:underline"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 hover:text-primary transition-colors after:content-[url(/external.svg)] hover:underline font-medium"
                 >
                   Source
                 </a>
                 <a
                   href={linkPreview}
                   target="_blank"
-                  class="inline-flex items-center gap-2 after:content-[url(/external.svg)] hover:underline"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 hover:text-primary transition-colors after:content-[url(/external.svg)] hover:underline font-medium"
                 >
                   Preview
                 </a>
               </div>
             </div>
-            <div class="flex items-center justify-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-t-2xl sm:rounded-l-none sm:rounded-r-2xl p-6 sm:p-8 md:p-10 order-1 sm:order-2">
+            <a 
+              href={linkPreview}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-t-2xl sm:rounded-l-none sm:rounded-r-2xl p-6 sm:p-8 md:p-10 order-1 sm:order-2 cursor-pointer group min-h-[280px] sm:min-h-0"
+            >
               {useResponsive ? (
                 <>
                   {/* Mobile: PNG version */}
                   <Image
-                    class="block sm:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    class="block sm:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                     src={image}
                     alt={name}
                     width="736"
@@ -70,7 +77,7 @@ const getDesktopImage = (imgPath: string) => {
                   />
                   {/* Tablet: JPG version */}
                   <Image
-                    class="hidden sm:block lg:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    class="hidden sm:block lg:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                     src={desktopImage}
                     alt={name}
                     width="736"
@@ -78,7 +85,7 @@ const getDesktopImage = (imgPath: string) => {
                   />
                   {/* Desktop: PNG version */}
                   <Image
-                    class="hidden lg:block w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                    class="hidden lg:block w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                     src={image}
                     alt={name}
                     width="736"
@@ -87,14 +94,14 @@ const getDesktopImage = (imgPath: string) => {
                 </>
               ) : (
                 <Image
-                  class="w-full h-full rounded-lg object-contain drop-shadow-2xl"
+                  class="w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
                   src={image}
                   alt={name}
                   width="736"
                   height="483"
                 />
               )}
-            </div>
+            </a>
           </div>
         </div>
       );

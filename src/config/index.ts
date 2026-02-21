@@ -160,17 +160,17 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   youtube: [
-    {
+     {
       title: "React Fundamentals",
       description: "Learn React fundamentals including file structure, social media app UI, and codebase development. Perfect for beginners starting with React.",
       playlistId: "PLKVQKxiHjrUWqBRmO-Q4j2k1E3ytIxfMz",
       videoCount: 4,
     },
     {
-      title: "Front End Development",
-      description: "Complete front-end development tutorials covering modern frameworks and best practices for building interactive user interfaces.",
-      playlistId: "PLKVQKxiHjrUXUW8wVIEdte0RW2OmwpvvW",
-      videoCount: 4,
+      title: "Data Analytics",
+      description: "Advanced data analytics tutorials covering real-world scenarios, KPI development, and insights generation from complex datasets.",
+      playlistId: "PLKVQKxiHjrUV1DcRLOxJa-WPNw7QOfcGa",
+      videoCount: 8,
     },
     {
       title: "Data Science with Python",
@@ -179,10 +179,10 @@ export const SITE_CONTENT: SiteContent = {
       videoCount: 4,
     },
     {
-      title: "Data Analytics",
-      description: "Advanced data analytics tutorials covering real-world scenarios, KPI development, and insights generation from complex datasets.",
-      playlistId: "PLKVQKxiHjrUV1DcRLOxJa-WPNw7QOfcGa",
-      videoCount: 8,
+      title: "Front End Development",
+      description: "Complete front-end development tutorials covering modern frameworks and best practices for building interactive user interfaces.",
+      playlistId: "PLKVQKxiHjrUXUW8wVIEdte0RW2OmwpvvW",
+      videoCount: 4,
     },
   ],
   about: {
