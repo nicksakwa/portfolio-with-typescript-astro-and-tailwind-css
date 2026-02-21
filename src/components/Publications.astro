@@ -1,0 +1,61 @@
+---
+import Section from "./Section.astro";
+import type { PublicationProps } from "@types";
+
+interface Props {
+  publications: PublicationProps[];
+}
+
+const { publications } = Astro.props;
+---
+
+<Section text="Publications" href="publications">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    {
+      publications.map(({ title, summary, date, link, image }) => (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block rounded-2xl border border-neutral/20 bg-[#1c232d]/85 overflow-hidden hover:border-[#2563eb]/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#2563eb]/20"
+        >
+          {image && (
+            <div class="relative h-64 overflow-hidden bg-gradient-to-br from-slate-800/30 to-slate-900/30">
+              <img
+                src={image}
+                alt={title}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1c232d] via-transparent to-transparent opacity-70" />
+              
+              {/* Medium Logo Overlay */}
+              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2.5 shadow-lg">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+                </svg>
+              </div>
+            </div>
+          )}
+          
+          <div class="p-6 space-y-4">
+            <h3 class="font-serif text-2xl font-bold text-white group-hover:text-[#2563eb] transition-colors leading-tight line-clamp-2">
+              {title}
+            </h3>
+            
+            <p class="text-neutral/90 text-base leading-relaxed line-clamp-3">
+              {summary}
+            </p>
+            
+            <div class="flex items-center gap-2 text-[#2563eb] font-medium text-sm pt-2 group-hover:gap-3 transition-all">
+              <span>Read on Medium</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</Section>
