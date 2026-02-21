@@ -7,22 +7,22 @@ const { name, specialty, summary, email } = Astro.props;
 
 <section class="pt-20 pb-10 md:pt-28 md:pb-12" id="#hero">
   <h1
-    class="mb-3 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:text-9xl lg:text-[10rem] text-left md:text-center"
+    class="mb-3 font-serif text-7xl font-bold tracking-tightest text-white sm:text-8xl md:text-8xl lg:text-9xl text-left md:text-center"
   >
     {name}
   </h1>
   <p
-    class="mb-10 font-serif text-5xl leading-tight font-bold tracking-tighter text-primary sm:text-6xl md:text-7xl lg:text-8xl text-left md:text-center"
+    class="mb-10 font-serif text-5xl leading-tight font-bold tracking-tighter text-primary sm:text-6xl md:text-6xl lg:text-7xl text-left md:text-center"
   >
     {specialty}
   </p>
-  <p class="mb-16 text-lg font-normal text-neutral md:text-xl lg:text-2xl max-w-5xl leading-relaxed text-left md:text-center md:mx-auto">
+  <p class="mb-16 text-lg font-normal text-neutral md:text-xl lg:text-xl max-w-5xl leading-relaxed text-left md:text-center md:mx-auto">
     {summary}
   </p>
 
   <div class="text-center">
     <a
-      class="inline-block rounded-full bg-[#2563eb] px-10 py-6 text-base md:text-lg font-medium text-[#fff] hover:bg-[#1d4ed8] transition-colors"
+      class="inline-block rounded-full bg-[#2563eb] px-10 py-6 text-base md:text-base font-medium text-[#fff] hover:bg-[#1d4ed8] transition-colors"
       href={`mailto:${email}`}>Get in Touch</a
     >
   </div>
