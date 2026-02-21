@@ -8,10 +8,10 @@ export const SITE_CONFIG: SiteConfig = {
   lang: "en",
   siteLogo: "/profilepic.jpg",
   navLinks: [
-    { text: "Experience", href: "#experience" },
-    { text: "Projects", href: "#projects" },
+    { text: "Experience", href: "/#experience" },
+    { text: "Projects", href: "/#projects" },
     { text: "Publications", href: "/publications" },
-    { text: "About", href: "#about" },
+    { text: "About", href: "/#about" },
   ],
   socialLinks: [
     { text: "Twitter", href: "https://x.com/nickspartan01" },
@@ -91,6 +91,13 @@ export const SITE_CONTENT: SiteContent = {
       linkPreview: "http://lyxaevents.com/",
       linkSource: "http://lyxaevents.com/",
       image: "/lyxa.png",
+    },
+    {
+      name: "Digital Proximity",
+      summary: "I founded digital proximity to teach programming and software development after work hours for free on social media to students and professionals all around the world",
+      linkPreview: "https://www.youtube.com/@DigitalProximity01",
+      linkSource: "https://www.youtube.com/@DigitalProximity01",
+      image: "/digital.png",
     },
   ],
   publications: [
