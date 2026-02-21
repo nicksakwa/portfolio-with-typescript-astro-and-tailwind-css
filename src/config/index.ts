@@ -11,6 +11,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Experience", href: "/#experience" },
     { text: "Projects", href: "/#projects" },
     { text: "Publications", href: "/publications" },
+    { text: "YouTube", href: "/youtube" },
     { text: "About", href: "/#about" },
   ],
   socialLinks: [
@@ -156,6 +157,36 @@ export const SITE_CONTENT: SiteContent = {
       date: "May 28, 2025",
       link: "https://medium.com/@nicksakwa/data-science-with-the-python-programming-language",
       image: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*eemTdeOylAYS4DkkW851cg.png",
+    },
+  ],
+  youtube: [
+    {
+      title: "React Fundamentals",
+      description: "Learn React fundamentals including file structure, social media app UI, and codebase development. Perfect for beginners starting with React.",
+      playlistId: "PLvRI3xKbRxDPcM3OmJLj0tPrHPAmP-o7B",
+      videoCount: 4,
+      thumbnail: "https://i.ytimg.com/vi/TqhYslDIemQ/hqdefault.jpg",
+    },
+    {
+      title: "Front End Development",
+      description: "Complete front-end development tutorials covering modern frameworks and best practices for building interactive user interfaces.",
+      playlistId: "PLvRI3xKbRxDM3u1rAfVrV33FpZCfYlSKU",
+      videoCount: 4,
+      thumbnail: "https://i.ytimg.com/vi/d5Q5RZmLndc/hqdefault.jpg",
+    },
+    {
+      title: "Data Science with Python",
+      description: "Master data science concepts using Python programming language. Learn data ingestion, web scraping, and analysis techniques.",
+      playlistId: "PLvRI3xKbRxDOqvVxiIaE1hcHl8H_DfGxC",
+      videoCount: 4,
+      thumbnail: "https://i.ytimg.com/vi/kZ9HfHJgdes/hqdefault.jpg",
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data analytics tutorials covering real-world scenarios, KPI development, and insights generation from complex datasets.",
+      playlistId: "PLvRI3xKbRxDNe68wVjXKtPMz-KSKGwCVY",
+      videoCount: 8,
+      thumbnail: "https://i.ytimg.com/vi/rMl2GgdE_hs/hqdefault.jpg",
     },
   ],
   about: {

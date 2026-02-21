@@ -1,0 +1,23 @@
+---
+import { SITE_CONTENT } from "@config";
+import Layout from "@layouts/Layout.astro";
+import YouTubeList from "@components/YouTube.astro";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <div class="min-h-screen pt-20 lg:pt-8">
+    <!-- Page Header -->
+    <div class="text-center mb-16 px-8">
+      <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+        My YouTube Channel
+      </h1>
+      <p class="text-lg md:text-xl lg:text-2xl text-neutral max-w-3xl mx-auto leading-relaxed">
+        Video tutorials and courses on web development, data science, and programming. Watch full playlists directly from here.
+      </p>
+    </div>
+
+    <YouTubeList playlists={SITE_CONTENT.youtube} />
+  </div>
+</Layout>

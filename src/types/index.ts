@@ -13,6 +13,7 @@ export interface SiteContent {
   experience: ExperienceProps[];
   projects: ProjectProps[];
   publications: PublicationProps[];
+  youtube: YouTubeProps[];
   about: AboutProps;
 }
 
@@ -50,6 +51,14 @@ export interface PublicationProps {
   date: string;
   link: string;
   image?: string;
+}
+
+export interface YouTubeProps {
+  title: string;
+  description: string;
+  playlistId: string;
+  thumbnail?: string;
+  videoCount?: number;
 }
 
 export interface HeaderProps {
