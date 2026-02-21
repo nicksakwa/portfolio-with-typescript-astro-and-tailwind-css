@@ -1,5 +1,4 @@
 ---
-import Section from "./Section.astro";
 import type { PublicationProps } from "@types";
 
 interface Props {
@@ -9,10 +8,10 @@ interface Props {
 const { publications } = Astro.props;
 ---
 
-<Section text="Publications" href="publications">
+<div class="py-8 md:py-12 px-8">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
     {
-      publications.map(({ title, summary, date, link, image }) => (
+      publications.map(({ title, summary, link, image }) => (
         <a
           href={link}
           target="_blank"
@@ -58,4 +57,4 @@ const { publications } = Astro.props;
       ))
     }
   </div>
-</Section>
+</div>

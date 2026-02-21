@@ -1,7 +1,7 @@
 ---
 import { SITE_CONTENT } from "@config";
 import Layout from "@layouts/Layout.astro";
-import Publications from "@components/Publications.astro";
+import PublicationsList from "@components/Publications.astro";
 
 import "../styles/global.css";
 ---
@@ -18,6 +18,6 @@ import "../styles/global.css";
       </p>
     </div>
 
-    <Publications publications={SITE_CONTENT.publications} />
+    <PublicationsList publications={SITE_CONTENT.publications} />
   </div>
 </Layout>
