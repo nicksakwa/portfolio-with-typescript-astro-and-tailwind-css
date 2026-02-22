@@ -36,7 +36,7 @@ export const SITE_CONTENT: SiteContent = {
   experience: [
     {
       company: "Techno Brain Group",
-      position: "Full Stack Developer",
+      position: "Software Engineer",
       startDate: "Feb 2026",
       endDate: "Present",
       summary: [
