@@ -24,7 +24,7 @@ const getDesktopImage = (imgPath: string) => {
   <!-- Project Content with Integrated Breadcrumb Navigation -->
   <div class="relative">
     {
-      projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
+      projects.map(({ name, shortName, summary, image, linkPreview, linkSource }, index) => {
         const useResponsive = hasResponsiveImage(image);
         const desktopImage = useResponsive ? getDesktopImage(image) : image;
         
@@ -54,7 +54,7 @@ const getDesktopImage = (imgPath: string) => {
                             : 'text-neutral hover:text-white'
                         }`}
                       >
-                        {project.name}
+                        {project.shortName}
                       </button>
                       {i < projects.length - 1 && (
                         <svg class="w-4 h-4 mx-2 text-neutral/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">

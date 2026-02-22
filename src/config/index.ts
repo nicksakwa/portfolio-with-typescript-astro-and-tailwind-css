@@ -60,6 +60,7 @@ export const SITE_CONTENT: SiteContent = {
   projects: [
     {
       name: "ChatPay AI powered chatbot for payments",
+      shortName: "ChatPay",
       summary: "Whatsapp AI powered chatbot for payments and customer support",
       linkPreview: "https://chatpay.qriscorp.com/",
       linkSource: "https://wa.me/15558130850",
@@ -67,6 +68,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Yassako electricity credit application",
+      shortName: "Yassako",
       summary: "API development, web and mobile app for electricity credit purchase available on Android and iOS platforms",
       linkPreview: "https://yassako.net/",
       linkSource: "https://yassako.net/",
@@ -74,6 +76,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Azawadi",
+      shortName: "Azawadi",
       summary: "E commerce gifting web application to cherish the moment with your loved ones",
       linkPreview: "https://azawadi.com/",
       linkSource: "https://azawadi.com/",
@@ -81,6 +84,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Limbo pay reliable payment platform",
+      shortName: "LimboPay",
       summary: "API development, web and mobile app for freelance payments available on Android and iOS platforms",
       linkPreview: "https://limbopay.com/",
       linkSource: "https://limbopay.com/",
@@ -88,6 +92,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Lyxa events application",
+      shortName: "LyxaEvents",
       summary: "API development, web and mobile app for ticket purchase and verification available on Android and iOS platforms",
       linkPreview: "http://lyxaevents.com/",
       linkSource: "http://lyxaevents.com/",
@@ -95,6 +100,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "Digital Proximity",
+      shortName: "DigitalProximity",
       summary: "I founded digital proximity to teach programming and software development after work hours for free on social media to students and professionals all around the world",
       linkPreview: "https://www.youtube.com/@DigitalProximity01",
       linkSource: "https://www.youtube.com/@DigitalProximity01",
