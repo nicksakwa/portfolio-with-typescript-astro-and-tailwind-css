@@ -193,7 +193,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-       I am a Software Engineer with strong fundamentalsl in backend and front end development, as well as AI engineering & Data Science. I focus on performance, security  and scalability.
+       I am a Software Engineer with strong fundamentals in backend and front end development, as well as AI engineering & Data Science. I focus on performance, security  and scalability.
     `,
     image: "/profilepic.jpg",
   },
