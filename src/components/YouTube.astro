@@ -16,10 +16,9 @@ const { playlists } = Astro.props;
           {/* YouTube Playlist Embed */}
           <div class="relative w-full aspect-video bg-black">
             <iframe
-              class="absolute inset-0 w-full h-full"
+              class="absolute inset-0 w-full h-full border-0"
               src={`https://www.youtube.com/embed/videoseries?list=${playlistId}`}
               title={title}
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             />

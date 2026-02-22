@@ -141,8 +141,8 @@ const getDesktopImage = (imgPath: string) => {
   let currentProject = 0;
   const projectTabs = document.querySelectorAll('.project-tab');
   const projectContents = document.querySelectorAll('.project-content');
-  const prevButton = document.getElementById('prev-project');
-  const nextButton = document.getElementById('next-project');
+  const prevButton = document.getElementById('prev-project') as HTMLButtonElement | null;
+  const nextButton = document.getElementById('next-project') as HTMLButtonElement | null;
 
   function showProject(index: number) {
     // Hide all projects
