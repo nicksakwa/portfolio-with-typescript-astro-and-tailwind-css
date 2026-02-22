@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Nick Sakwa — Software Developer",
   author: "Nick Sakwa",
   description:
-    "Software Engineer from Kampala, Uganda. I specialize in developing Data Science and machine learning model, web and mobile application development and maintenance.",
+    "Software Engineer & IT Consultant, delivering secure optimized digital solutions via Artificial intelligence, web, mobile , cloud & data enviroments",
   lang: "en",
   siteLogo: "/profilepic.jpg",
   navLinks: [
@@ -193,8 +193,7 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-       I’m a Full stack developer with strong fundamentals in backend and frontend development, as well as experience in AI engineering.
-       I focus on performance, security, and scalability.
+       I am a Software Engineer with strong fundamentalsl in backend and front end development, as well as AI engineering & Data Science. I focus on performance, security  and scalability.
     `,
     image: "/profilepic.jpg",
   },
