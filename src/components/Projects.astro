@@ -21,90 +21,173 @@ const getDesktopImage = (imgPath: string) => {
 ---
 
 <Section text="Featured Projects" href="projects">
-  {
-    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
-      const top = 98 + index * 50;
-      const useResponsive = hasResponsiveImage(image);
-      const desktopImage = useResponsive ? getDesktopImage(image) : image;
-      
-      return (
-        <div
-          style={`top: ${top}px;`}
-          class="sticky mb-16 sm:mb-20 rounded-2xl border border-neutral/20 bg-black"
-        >
-          <div class="bg-difu relative z-[1] grid w-full grid-rows-[auto_auto] rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-[45%_55%] sm:grid-rows-1 sm:min-h-[520px] md:min-h-[580px] lg:min-h-[620px]">
-            <div class="px-6 pt-6 pb-6 sm:px-8 sm:pt-10 sm:pb-10 md:px-10 md:pt-12 md:pb-12 lg:px-12 lg:pt-14 lg:pb-14 flex flex-col justify-between order-2 sm:order-1 min-h-[400px] sm:min-h-0">
-              <div class="mb-6 sm:mb-8">
-                <h3 class="mb-4 sm:mb-5 md:mb-6 font-serif text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight">
-                  {name}
-                </h3>
-                <p class="text-base sm:text-lg md:text-lg lg:text-xl text-neutral leading-relaxed mb-6 sm:mb-0">{summary}</p>
+  <!-- Project Navigation Tabs -->
+  <div class="flex flex-wrap gap-3 mb-8 justify-center">
+    {projects.map((project, index) => (
+      <button
+        data-project-tab={index}
+        class={`project-tab px-6 py-3 rounded-lg font-medium transition-all ${
+          index === 0 
+            ? 'bg-[#2563eb] text-white' 
+            : 'bg-[#1c232d] text-neutral hover:bg-[#2563eb]/20 hover:text-white border border-neutral/20'
+        }`}
+      >
+        {project.name}
+      </button>
+    ))}
+  </div>
+
+  <!-- Project Content -->
+  <div class="relative">
+    {
+      projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
+        const useResponsive = hasResponsiveImage(image);
+        const desktopImage = useResponsive ? getDesktopImage(image) : image;
+        
+        return (
+          <div
+            data-project-content={index}
+            class={`project-content rounded-2xl border border-neutral/20 bg-black ${index === 0 ? '' : 'hidden'}`}
+          >
+            <div class="bg-difu relative z-[1] grid w-full grid-rows-[auto_auto] rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-[length:128px] before:bg-repeat before:opacity-[5%] before:content-[''] sm:grid-cols-[45%_55%] sm:grid-rows-1 sm:min-h-[520px] md:min-h-[580px] lg:min-h-[620px]">
+              <div class="px-6 pt-6 pb-6 sm:px-8 sm:pt-10 sm:pb-10 md:px-10 md:pt-12 md:pb-12 lg:px-12 lg:pt-14 lg:pb-14 flex flex-col justify-between order-2 sm:order-1 min-h-[400px] sm:min-h-0">
+                <div class="mb-6 sm:mb-8">
+                  <h3 class="mb-4 sm:mb-5 md:mb-6 font-serif text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-medium text-primary leading-tight">
+                    {name}
+                  </h3>
+                  <p class="text-base sm:text-lg md:text-lg lg:text-xl text-neutral leading-relaxed mb-6 sm:mb-0">{summary}</p>
+                </div>
+                <div class="flex flex-wrap gap-6 sm:gap-7 md:gap-8 text-white text-lg sm:text-xl md:text-xl lg:text-xl flex-shrink-0">
+                  <a
+                    href={linkSource}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 hover:text-primary transition-colors after:content-[url(/external.svg)] hover:underline font-medium"
+                  >
+                    Source
+                  </a>
+                  <a
+                    href={linkPreview}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 hover:text-primary transition-colors after:content-[url(/external.svg)] hover:underline font-medium"
+                  >
+                    Preview
+                  </a>
+                </div>
               </div>
-              <div class="flex flex-wrap gap-6 sm:gap-7 md:gap-8 text-white text-lg sm:text-xl md:text-xl lg:text-xl flex-shrink-0">
-                <a
-                  href={linkSource}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 hover:text-primary transition-colors after:content-[url(/external.svg)] hover:underline font-medium"
-                >
-                  Source
-                </a>
-                <a
-                  href={linkPreview}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 hover:text-primary transition-colors after:content-[url(/external.svg)] hover:underline font-medium"
-                >
-                  Preview
-                </a>
-              </div>
+              <a 
+                href={linkPreview}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center justify-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-t-2xl sm:rounded-l-none sm:rounded-r-2xl p-6 sm:p-8 md:p-10 order-1 sm:order-2 cursor-pointer group min-h-[280px] sm:min-h-0"
+              >
+                {useResponsive ? (
+                  <>
+                    {/* Mobile: PNG version */}
+                    <Image
+                      class="block sm:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      src={image}
+                      alt={name}
+                      width="736"
+                      height="483"
+                    />
+                    {/* Tablet: JPG version */}
+                    <Image
+                      class="hidden sm:block lg:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      src={desktopImage}
+                      alt={name}
+                      width="736"
+                      height="483"
+                    />
+                    {/* Desktop: PNG version */}
+                    <Image
+                      class="hidden lg:block w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      src={image}
+                      alt={name}
+                      width="736"
+                      height="483"
+                    />
+                  </>
+                ) : (
+                  <Image
+                    class="w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                    src={image}
+                    alt={name}
+                    width="736"
+                    height="483"
+                  />
+                )}
+              </a>
             </div>
-            <a 
-              href={linkPreview}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-center bg-gradient-to-br from-slate-800/30 to-slate-900/30 rounded-t-2xl sm:rounded-l-none sm:rounded-r-2xl p-6 sm:p-8 md:p-10 order-1 sm:order-2 cursor-pointer group min-h-[280px] sm:min-h-0"
-            >
-              {useResponsive ? (
-                <>
-                  {/* Mobile: PNG version */}
-                  <Image
-                    class="block sm:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                    src={image}
-                    alt={name}
-                    width="736"
-                    height="483"
-                  />
-                  {/* Tablet: JPG version */}
-                  <Image
-                    class="hidden sm:block lg:hidden w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                    src={desktopImage}
-                    alt={name}
-                    width="736"
-                    height="483"
-                  />
-                  {/* Desktop: PNG version */}
-                  <Image
-                    class="hidden lg:block w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                    src={image}
-                    alt={name}
-                    width="736"
-                    height="483"
-                  />
-                </>
-              ) : (
-                <Image
-                  class="w-full h-full rounded-lg object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                  src={image}
-                  alt={name}
-                  width="736"
-                  height="483"
-                />
-              )}
-            </a>
           </div>
-        </div>
-      );
-    })
-  }
+        );
+      })
+    }
+  </div>
+
+  <!-- Navigation Arrows (Optional) -->
+  <div class="flex justify-center gap-4 mt-8">
+    <button id="prev-project" class="px-6 py-3 rounded-lg bg-[#1c232d] text-white hover:bg-[#2563eb] transition-colors border border-neutral/20 disabled:opacity-50 disabled:cursor-not-allowed">
+      ← Previous
+    </button>
+    <button id="next-project" class="px-6 py-3 rounded-lg bg-[#1c232d] text-white hover:bg-[#2563eb] transition-colors border border-neutral/20 disabled:opacity-50 disabled:cursor-not-allowed">
+      Next →
+    </button>
+  </div>
 </Section>
+
+<script>
+  let currentProject = 0;
+  const projectTabs = document.querySelectorAll('.project-tab');
+  const projectContents = document.querySelectorAll('.project-content');
+  const prevButton = document.getElementById('prev-project');
+  const nextButton = document.getElementById('next-project');
+
+  function showProject(index: number) {
+    // Hide all projects
+    projectContents.forEach(content => content.classList.add('hidden'));
+    // Show selected project
+    projectContents[index]?.classList.remove('hidden');
+    
+    // Update tab styles
+    projectTabs.forEach((tab, i) => {
+      if (i === index) {
+        tab.classList.remove('bg-[#1c232d]', 'text-neutral', 'border', 'border-neutral/20');
+        tab.classList.add('bg-[#2563eb]', 'text-white');
+      } else {
+        tab.classList.remove('bg-[#2563eb]', 'text-white');
+        tab.classList.add('bg-[#1c232d]', 'text-neutral', 'border', 'border-neutral/20');
+      }
+    });
+    
+    currentProject = index;
+    
+    // Update button states
+    if (prevButton && nextButton) {
+      prevButton.disabled = index === 0;
+      nextButton.disabled = index === projectContents.length - 1;
+    }
+  }
+
+  // Tab click handlers
+  projectTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => showProject(index));
+  });
+
+  // Arrow button handlers
+  prevButton?.addEventListener('click', () => {
+    if (currentProject > 0) {
+      showProject(currentProject - 1);
+    }
+  });
+
+  nextButton?.addEventListener('click', () => {
+    if (currentProject < projectContents.length - 1) {
+      showProject(currentProject + 1);
+    }
+  });
+
+  // Initialize
+  showProject(0);
+</script>
