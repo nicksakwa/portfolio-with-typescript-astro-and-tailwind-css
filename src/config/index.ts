@@ -4,7 +4,7 @@ export const SITE_CONFIG: SiteConfig = {
   title: "Nick Sakwa — Software Developer",
   author: "Nick Sakwa",
   description:
-    "Software Engineer & IT Consultant, delivering secure optimized digital solutions via Artificial intelligence, web, mobile , cloud & data enviroments",
+    "Software Engineer & IT Consultant, delivering secure optimized digital solutions via Artificial intelligence, web, mobile , cloud & data environments",
   lang: "en",
   siteLogo: "/profilepic.jpg",
   navLinks: [
