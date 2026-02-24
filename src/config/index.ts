@@ -48,7 +48,7 @@ export const SITE_CONTENT: SiteContent = {
      {
       company: "Qriscorp (U) Limited",
       position: "Full Stack Developer",
-      startDate: "July 2025",
+      startDate: "March 2025",
       endDate: "Feb 2026",
       summary: [
         "Web & app development: Frontend & backend",
